@@ -16,6 +16,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">                         <!--  for animation -->
+  
+
+
 <TITLE>Free simple personal portfolio website 2021</TITLE>
 
     <style>
@@ -35,6 +41,28 @@
         width: 100%; height:fit-content;font-family: 'Josefin Sans', sans-serif;
         
       }
+
+      
+      .btn-grad {background-image: linear-gradient(to right, #16A085 0%,yellow  51%, #16A085  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color:black;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color:black;
+            text-decoration: none;
+          }
+         
       
       </style>
     
@@ -137,10 +165,10 @@
       <img src="roadcpy2.jpg" class="img-fluid" style="width:500px;height:500px ; margin-top:30px">    <!-- class="img-fluid" is used to make image responsive -->
         </div>
             <div class="col-lg-6 col-md-6 col-12">
-              <h1>Who am i?</h1>
-              <button class=" btn-outline-warning" type="button" class="btn btn-primary btn-lg" data-toggle="modal" >        <!-- launch button -->
-                <a href="4-profile.html">Launch</a>  <!--data-target="#modelId" is used instead of <a></a> to use the popup effect from line 126-->
-              </button>
+              <h1>Who am i?</h1><br>
+                    <!-- launch button -->
+                <a href="4-profile.html" class="btn-grad">Launch</a>  <!--data-target="#modelId" is used instead of <a></a> to use the popup effect from line 126-->
+              
               <hr>
    
               <p class="lead"> Hello friends i am a entry level web developer and a programmer in C,C++ languages.        <!--lead is used to increase text size-->
@@ -193,8 +221,8 @@
 
  <div class="row">                                     <!--row makes cards parallel with each other-->
   <div class="col-lg-3 col-md-4 col-sm-12 col-12">
-      <div class="card " style="width:auto">  <!--auto helps in adjusting the cards acc to screen width-->
-          <img class="card-img-top" src="linkedin.jpg" alt="Card image" style="width:100%">
+      <div class="card animated bounceInLeft" style="width:auto">  <!--auto helps in adjusting the cards acc to screen width-->
+          <img class="card-img-top 1" src="linkedin.jpg" alt="Card image" style="width:100%">
               <div class="card-body">
               <h4 class="card-title">linkedin profile</h4>
           <a href="https://www.linkedin.com/in/rishi-singh-12982520a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BlrSr%2FB9WQgekWPcIqtXqkg%3D%3D"><button class="btn-danger">see profile</button></a>
@@ -207,7 +235,7 @@
 
   <div class="col-lg-3 col-md-4 col-sm-12 col-12">             <!-- large device me 4,4 medium me 4,4 aur small devices me 12(full columns) -->
     <div class="card " style="width:auto">
-      <img class="card-img-top" src="hackerrank.jpg" alt="Card image" style="width:100%">
+      <img class="card-img-top 2" src="hackerrank.jpg" alt="Card image" style="width:100%">
       <div class="card-body">
         <h4 class="card-title">hackerrank profile</h4>
         <a href="https://www.hackerrank.com/sec_B_1073"><button class="btn-danger">see profile</button></a>
@@ -219,7 +247,7 @@
 
   <div class="col-lg-3 col-md-4 col-sm-12 col-12">             <!-- large device me 4,4 medium me 4,4 aur small devices me 12(full columns) -->
     <div class="card" style="auto">
-      <img class="card-img-top" src="github.jpg" alt="Card image" style="width:100%">
+      <img class="card-img-top 3" src="github.jpg" alt="Card image" style="width:100%">
       <div class="card-body">
         <h4 class="card-title">github profile</h4>
         <a href="https://github.com/Rishi8087"><button class="btn-danger">see profile</button></a>
@@ -231,7 +259,7 @@
 
   <div class="col-lg-3 col-md-4 col-sm-12 col-12">             <!-- large device me 4,4 medium me 4,4 aur small devices me 12(full columns) -->
     <div class="card" style="width:auto">
-      <img class="card-img-top" src="instagram.jpg" alt="Card image" style="width:100%">
+      <img class="card-img-top 4" src="instagram.jpg" alt="Card image" style="width:100%">
       <div class="card-body">
         <h4 class="card-title"><i class="fa fa-instagram" aria-hidden="true"></i> insta profile</h4>
         <a href="https://www.instagram.com/rishisinghrks/"><button class="btn-danger">see profile</button></a>
@@ -254,10 +282,18 @@
   </article>
   </section>                       <!--end of contact section-->
 
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $(window).scroll(function() {
+     $(".1").animate();
+    })
+  })
+</script>
+
 </body>
 </html>
